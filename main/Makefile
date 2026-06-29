@@ -57,6 +57,8 @@ CFLAGS = -std=c99 -pedantic -fstrict-aliasing \
 
 SHELL=/bin/bash
 
+RM = del /Q
+
 CC=gcc
 
 PGMS= $(MAIN) $(MODULES)
@@ -96,7 +98,7 @@ mkxeq: $(MAIN)
 # remove old executables and old error log file
 
 rmxeq:
-	@ -rm -f $(MAIN); \
+	@ $(RM) $(MAIN); \
         echo "delete old executables"		
 
 
@@ -109,7 +111,7 @@ mkdep:  $(addsuffix .d,$(PGMS))
 # clean directory 
 
 clean:
-	@ -rm -rf *.d *.o .tmp $(MAIN)
+	@ $(RM) *.d *.o .tmp $(MAIN)
 .PHONY: clean
 
 ################################################################################
