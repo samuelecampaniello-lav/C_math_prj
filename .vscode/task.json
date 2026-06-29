@@ -1,0 +1,25 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build",
+      "type": "shell",
+      "command": "make",
+      "args": ["-C", "${workspaceFolder}/main"],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "presentation": { "reveal": "always" },
+      "problemMatcher": "$gcc"
+    },
+    {
+      "label": "Clean",
+      "type": "shell",
+      "command": "make",
+      "args": ["-C", "${workspaceFolder}/main", "clean"],
+      "group": "build",
+      "problemMatcher": []
+    }
+  ]
+}

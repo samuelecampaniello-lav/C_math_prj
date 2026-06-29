@@ -1,0 +1,13 @@
+# Compilazione
+*.o
+*.d
+*.out
+
+# Eseguibili (senza estensione, per Linux/Mac)
+main1
+
+# VS Code locale (le .vscode/ di configurazione le tieni, non questa)
+.vscode/.browse.c_cpp.db*
+
+# macOS
+.DS_Store
