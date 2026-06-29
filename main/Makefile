@@ -96,9 +96,8 @@ mkxeq: $(MAIN)
 # remove old executables and old error log file
 
 rmxeq:
-	@ $(RM) $(MAIN); \
-        echo "delete old executables"		
-
+	-@cmd /C "del /Q $(MAIN) 2>nul"
+	@echo "delete old executables"
 
 # make dependencies
 
@@ -109,7 +108,8 @@ mkdep:  $(addsuffix .d,$(PGMS))
 # clean directory 
 
 clean:
-	@ $(RM) *.d *.o .tmp $(MAIN)
+	-@cmd /C "del /Q *.d *.o $(MAIN) 2>nul"
+	-@cmd /C "del /Q .tmp 2>nul"
 .PHONY: clean
 
 ################################################################################
