@@ -55,8 +55,6 @@ CFLAGS = -std=c99 -pedantic -fstrict-aliasing \
 
 ############################## do not change ###################################
 
-SHELL=/bin/bash
-
 RM = del /Q
 
 CC=gcc

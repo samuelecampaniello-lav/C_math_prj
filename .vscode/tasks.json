@@ -5,7 +5,7 @@
       "label": "Build",
       "type": "shell",
       "command": "make",
-      "args": ["-C", "${workspaceFolder}/main"],
+      "args": ["-C", "${workspaceFolder}\\main"],
       "group": {
         "kind": "build",
         "isDefault": true
@@ -17,7 +17,7 @@
       "label": "Clean",
       "type": "shell",
       "command": "make",
-      "args": ["-C", "${workspaceFolder}/main", "clean"],
+      "args": ["-C", "${workspaceFolder}\\main", "clean"],
       "group": "build",
       "problemMatcher": []
     }
